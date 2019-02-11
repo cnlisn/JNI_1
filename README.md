@@ -6,25 +6,24 @@ JNI test demo
 
 在 CmakeLists.txt 中添加如下代码：
 
-IF (${CMAKE_HOST_SYSTEM_NAME} MATCHES "Windows")
-    ADD_DEFINITIONS(-DWindows)
-ELSE (${CMAKE_HOST_SYSTEM_NAME} MATCHES "Linux")
-    ADD_DEFINITIONS(-DLinux)
-ENDIF ()
+        IF (${CMAKE_HOST_SYSTEM_NAME} MATCHES "Windows")
+            ADD_DEFINITIONS(-DWindows)
+        ELSE (${CMAKE_HOST_SYSTEM_NAME} MATCHES "Linux")
+            ADD_DEFINITIONS(-DLinux)
+        ENDIF ()
 
 #  使用方式
 使用方式和 prinft 等函数一样。
-
-LOGD("hello world");
-LOGD("%d", 10);
-LOGD("%s : %d", "num", 20);
-LOGD();
+        LOGD("hello world");
+        LOGD("%d", 10);
+        LOGD("%s : %d", "num", 20);
+        LOGD();
 
 #  效果展示
 最终效果将是：[文件名][方法名][行号]: format... 的形式，例如
 
-[main.cpp][main][5]: hello world
-[main.cpp][main][6]: 10
-[main.cpp][main][7]: num : 20
-[main.cpp][main][8]:
+        [main.cpp][main][5]: hello world
+        [main.cpp][main][6]: 10
+        [main.cpp][main][7]: num : 20
+        [main.cpp][main][8]:
 ---------------------
