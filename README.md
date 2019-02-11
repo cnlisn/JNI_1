@@ -14,6 +14,7 @@ JNI test demo
 
 #  使用方式
 使用方式和 prinft 等函数一样。
+
         LOGD("hello world");
         LOGD("%d", 10);
         LOGD("%s : %d", "num", 20);
